@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>两栏布局</title>
+</head>
+<style type="text/css">
+	.content::after{
+		display: block;
+		content: '';
+		clear:both;
+	}
+	.aside{
+		width:200px;
+		background: red;
+		float:left;
+		height: 300px;
+		
+	}
+	.main{
+		background: green;
+		height: 400px;
+		/*块级元素感知不到浮动元素的存在，但是文字能够感知到，
+		如果main区域高度大于aside高度，且文字行数很多，
+		就会到aside侧，所以用margin-left属性非常好*/
+		margin-left: 215px;
+		border:2px solid red;
+	}
+	.footer{
+		background: blue;
+		margin-top: 15px;
+	}
+	.layout{
+		max-width: 1000px;
+		margin:0 auto;
+	}
+</style>
+<body>
+	<!-- 特点： 一栏固定宽度， 另外一栏自适应撑满
+	实现方式：浮动元素 + 普通元素margin
+	ps:浮动元素放在前面才能实现，不管侧边栏放在main的左边还是右边
+	 -->
+	<div class="content layout">
+		<div class="aside">侧边栏</div>
+		<div class="main">主内容区</div>
+	</div>
+	<div class="footer layout">底部</div>
+</body>
+</html>
