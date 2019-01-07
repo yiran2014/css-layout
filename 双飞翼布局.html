@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>双飞翼布局</title>
+	<style type="text/css">
+		.menu{
+			width: 200px;
+			height: 400px;
+			background: red;
+			float: left;
+			margin-left:-100%;
+		}
+		.aside{
+			width: 200px;
+			height: 400px;
+			background: pink;
+			float: left;
+			margin-left:-200px;
+		}
+		.main{					
+		/*	
+			height: 500px;
+			background: #aaa;
+		*/	
+/*	浮动后宽度会收缩，所以必须设置个宽度*/
+			width: 100%;
+			float: left;
+		}
+		.wrap{
+			margin-left:210px;
+			margin-right: 210px;
+			background: yellow;
+			height: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="main">
+			<div class="wrap">
+				主区域
+			</div>
+		</div>
+		<div class="menu">
+			菜单栏
+		</div>
+		<div class="aside">
+			侧边栏
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>三栏布局</title>
+	<style type="text/css">
+		.content::after{
+			display: block;
+			content: '';
+			clear:both;
+		}
+		.menu{
+			width: 200px;
+			height: 400px;
+			background: blue;
+			float:left;
+		}
+		.aside{
+			width: 200px;
+			height: 400px;
+			background: pink;
+			float: right;
+		}
+		.main{
+			background: #aaa;
+			height: 500px;
+			margin-right: 215px;
+			margin-left: 215px;
+			/*设置最小宽度（目的是防止主区域变太短）会出现问题（请自己调试），不知道原因*/
+			/*解决方案是，可以在父容器上设置最小宽度，不会出现以上问题*/
+			/*min-width: 300px;*/
+		}
+		.footer{
+			background: red;
+			height: 100px;
+		}
+	    	.content{
+	    		/*min-width: 700px;*/
+	    	}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="menu">menu</div>
+		<div class="aside">aside</div>
+		<div class="main">fdasfdsjaifo;jdsifjdjfkdaaaaaaaaaaaa   fjidsaopfidsaopjfiodsaoijf</div>
+	</div>
+	<div class="footer">footer</div>
+</body>
+</html>
